@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Órbita | Caso de estudio</title>
+    <link rel="icon" href="../assets/images/favicon.svg" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <main style="max-width: 850px; margin: 0 auto">
+      <a href="../index.html">Volver a Órbita</a>
+      <p class="eyebrow" style="margin-top: 40px">PROYECTO 01 · PORTAFOLIO FRONTEND</p>
+      <h1>Órbita: gestión de proyectos</h1>
+      <p>
+        Aplicación demostrativa para organizar tareas y entregas de un estudio digital. Los
+        proyectos, el equipo y los contactos son ficticios. No representa experiencia laboral ni un
+        cliente real.
+      </p>
+      <h2>El problema</h2>
+      <p>
+        Un equipo necesita localizar tareas, conocer responsables y prioridades, y revisar entregas
+        desde el escritorio o el teléfono.
+      </p>
+      <h2>La solución</h2>
+      <p>
+        Una SPA con tablero, lista, resumen y equipo. Permite crear, editar, eliminar y cambiar el
+        estado de las tareas. Los filtros se combinan y las métricas se calculan desde los registros
+        actuales.
+      </p>
+      <h2>Correspondencia con la vacante</h2>
+      <ul>
+        <li>HTML semántico: navegación, secciones, formularios y tablas.</li>
+        <li>
+          Bootstrap 5.3.3: formularios, botones, tablas y barras de progreso, con diseño propio.
+        </li>
+        <li>JavaScript: eventos delegados, estado, validación, filtros y persistencia.</li>
+        <li>SPA: vistas por hash, navegación sin recarga e historial del navegador.</li>
+        <li>
+          Accesibilidad: etiquetas, foco visible, enlace de salto, diálogo nativo, anuncios de
+          estado y controles por teclado.
+        </li>
+        <li>
+          Diseño responsivo: tablero de cuatro, dos o una columna según el espacio disponible.
+        </li>
+        <li>
+          API REST: GET a JSONPlaceholder con validación de respuesta, tiempo límite, carga, error y
+          reintento.
+        </li>
+      </ul>
+      <h2>Decisiones y límites</h2>
+      <p>
+        Las tareas se guardan únicamente en localStorage del navegador. El directorio REST se
+        consulta en Equipo y no almacena contactos. No hay backend de tareas, autenticación propia
+        ni colaboración entre usuarios. Bootstrap, iconos y fuentes están incluidos localmente. Solo
+        el directorio REST requiere conexión.
+      </p>
+      <h2>Recorrido para una entrevista</h2>
+      <ol>
+        <li>Crea una tarea y muévela a revisión.</li>
+        <li>Filtra por proyecto y prioridad, y cambia a lista.</li>
+        <li>Recarga para comprobar la persistencia local.</li>
+        <li>Abre Resumen y explica cómo se calculan los indicadores.</li>
+        <li>
+          Consulta el directorio en Equipo. Desconecta la red y repite para mostrar el error y el
+          reintento.
+        </li>
+        <li>Recorre los controles con Tab y cierra el formulario con Escape.</li>
+      </ol>
+      <p>
+        Esta implementación incluye medidas de accesibilidad, pero no constituye una certificación
+        WCAG. La integración REST es de lectura; las operaciones de tareas son locales.
+      </p>
+    </main>
+  </body>
+</html>
