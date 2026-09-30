@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Órbita | Proyectos y entregas</title>
+    <meta
+      name="description"
+      content="Organiza proyectos, tareas y entregas en Órbita. Proyecto demostrativo de desarrollo frontend."
+    />
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="assets/vendor/lucide/lucide.min.js"></script>
+    <script defer src="js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <aside class="sidebar">
+      <a class="brand" href="#tablero"
+        ><span class="brand-mark">o</span> órbita<span class="brand-dot">.</span></a
+      >
+      <div class="workspace">
+        <span class="workspace-icon">E</span>
+        <div>Estudio Norte<small>Espacio de trabajo</small></div>
+      </div>
+      <p class="nav-caption">TRABAJO</p>
+      <nav aria-label="Navegación principal">
+        <a href="#resumen" data-route="resumen"
+          ><i data-lucide="chart-no-axes-combined"></i>Resumen</a
+        >
+        <a href="#tablero" data-route="tablero"
+          ><i data-lucide="layout-dashboard"></i>Tablero de tareas<span id="nav-count"></span
+        ></a>
+        <a href="#equipo" data-route="equipo"><i data-lucide="users"></i>Equipo</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <span class="demo-label">PROYECTO DEMOSTRATIVO</span>
+        <p>Ideas claras.<br />Entregas a tiempo.</p>
+        <div class="profile">
+          <span class="avatar me-avatar">MN</span>
+          <div>Miguel<small>Frontend developer</small></div>
+        </div>
+      </div>
+    </aside>
+    <div class="shell">
+      <header class="topbar">
+        <div>
+          Espacio de trabajo <span>/</span> <strong id="breadcrumb">Tablero de tareas</strong>
+        </div>
+        <span class="local-tag"><i data-lucide="hard-drive"></i> Datos en este navegador</span>
+      </header>
+      <main id="main" tabindex="-1">
+        <section class="page-heading">
+          <div>
+            <p class="eyebrow">ESTUDIO NORTE · PROYECTOS</p>
+            <h1 id="page-title">Cada entrega, en su lugar.</h1>
+            <p id="page-description">Un espacio para darle seguimiento a lo que viene.</p>
+          </div>
+          <button class="btn btn-dark primary-action" id="new-task">
+            <i data-lucide="plus"></i>Nueva tarea
+          </button>
+        </section>
+        <div id="view"></div>
+        <footer>
+          Órbita <span>Proyecto de portafolio · Datos ficticios</span
+          ><a href="docs/caso-de-estudio.html" target="_blank" rel="noopener"
+            >Acerca del proyecto <i data-lucide="external-link"></i
+          ></a>
+        </footer>
+      </main>
+    </div>
+    <dialog id="task-dialog" aria-labelledby="dialog-title">
+      <form id="task-form">
+        <div class="dialog-heading">
+          <div>
+            <p class="eyebrow">TAREAS</p>
+            <h2 id="dialog-title">Nueva tarea</h2>
+          </div>
+          <button type="button" class="icon-button" data-close aria-label="Cerrar" title="Cerrar">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <input type="hidden" name="id" />
+        <label for="title">Nombre de la tarea</label
+        ><input
+          class="form-control"
+          id="title"
+          name="title"
+          required
+          maxlength="120"
+          placeholder="¿Qué necesitas entregar?"
+        />
+        <label for="description">Descripción</label
+        ><textarea
+          class="form-control"
+          id="description"
+          name="description"
+          rows="3"
+          maxlength="1000"
+          placeholder="Contexto y criterios de entrega"
+        ></textarea>
+        <div class="form-grid">
+          <div>
+            <label for="project">Proyecto</label
+            ><select class="form-select" name="project" id="project">
+              <option>Web corporativa</option>
+              <option>App de clientes</option>
+              <option>Sistema de diseño</option>
+            </select>
+          </div>
+          <div>
+            <label for="owner">Responsable</label
+            ><select class="form-select" name="owner" id="owner">
+              <option>Ana Torres</option>
+              <option>Diego Ruiz</option>
+              <option>Lucía Vega</option>
+              <option>Miguel</option>
+            </select>
+          </div>
+          <div>
+            <label for="status">Estado</label
+            ><select class="form-select" name="status" id="status">
+              <option value="pending">Por hacer</option>
+              <option value="doing">En progreso</option>
+              <option value="review">En revisión</option>
+              <option value="done">Completada</option>
+            </select>
+          </div>
+          <div>
+            <label for="priority">Prioridad</label
+            ><select class="form-select" name="priority" id="priority">
+              <option>Media</option>
+              <option>Alta</option>
+              <option>Baja</option>
+            </select>
+          </div>
+        </div>
+        <label for="due">Fecha de entrega</label
+        ><input class="form-control" type="date" name="due" id="due" required />
+        <div class="dialog-actions">
+          <button type="button" id="delete-task" class="btn btn-outline-danger">Eliminar</button
+          ><span></span><button type="button" class="btn btn-light" data-close>Cancelar</button
+          ><button class="btn btn-dark" type="submit">Guardar tarea</button>
+        </div>
+      </form>
+    </dialog>
+    <div id="toast" class="notification" role="status" aria-live="polite"></div>
+  </body>
+</html>
