@@ -61,44 +61,6 @@ orbita-github/
 
 `js/app.js` contiene los datos iniciales, la validacion de registros, las funciones de renderizado, los eventos del formulario y la consulta asincrona. `css/styles.css` define el aspecto visual y los puntos de adaptacion a diferentes pantallas.
 
-## Subir a GitHub desde la web
-
-1. Crea un repositorio en GitHub, por ejemplo `orbita-frontend`.
-2. Selecciona **Add file > Upload files**.
-3. Arrastra el contenido de esta carpeta, manteniendo las subcarpetas. `index.html` debe quedar en la raiz del repositorio.
-4. Confirma con **Commit changes**.
-
-El ZIP sirve para transportar el proyecto. Extraelo antes de subir los archivos; no subas solamente el ZIP.
-
-## Subir con Git
-
-Desde una terminal abierta en esta carpeta:
-
-```bash
-git init
-git add .
-git commit -m "Agregar proyecto Orbita"
-git branch -M main
-git remote add origin https://github.com/TU-USUARIO/orbita-frontend.git
-git push -u origin main
-```
-
-Sustituye `TU-USUARIO` por tu usuario y crea primero un repositorio vacio. Si Git pide tu identidad, configura tu nombre y correo antes del commit. Esta entrega no esta vinculada a ninguna cuenta ni repositorio remoto.
-
-## Publicar en GitHub Pages
-
-En el repositorio, abre **Settings > Pages**, selecciona **Deploy from a branch**, elige la rama `main` y la carpeta `/(root)`, y guarda. GitHub mostrara el enlace cuando termine la publicacion. Las rutas relativas permiten alojar el proyecto bajo el nombre del repositorio.
-
-## Demostracion en entrevista
-
-1. Crea una tarea y cambiala a En revision.
-2. Combina los filtros y muestra la vista de lista.
-3. Recarga para demostrar el guardado local.
-4. Explica como se calculan los indicadores de Resumen.
-5. Consulta contactos en Equipo y demuestra el manejo de un fallo de red.
-6. Recorre el formulario con el teclado y cierra con Escape.
-
-Consulta `docs/caso-de-estudio.html` para presentar el problema y la solucion, y `docs/PRUEBAS.md` para el recorrido de verificacion.
 
 ## Alcance y limites
 
